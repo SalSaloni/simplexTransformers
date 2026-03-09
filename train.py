@@ -38,7 +38,7 @@ def train():
     #shuffle dataset
     for e in range(EPOCHS):
         #random permutation of indicees 0 to n-1
-        perm = torch.randomperm(n)
+        perm = torch.randperm(n)
         X,Y=X[perm], Y[perm]
 
         total_loss = 0

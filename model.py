@@ -41,7 +41,7 @@ class MultiHeadAttention(nn.Module):
 
         #attention weights needed to take a weighted sum of vals. 
         out = attn@v
-        out = out.transpose(1,2).contigious().view(B,T,D)
+        out = out.transpose(1,2).contiguous().view(B,T,D)
         return self.W_out(out)
     
 class TransformerBlock(nn.Module):
